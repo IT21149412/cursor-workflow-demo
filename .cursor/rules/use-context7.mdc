@@ -1,12 +1,14 @@
 ---
-description: Use Context7 for library APIs instead of training-data guesses
+description: Use Context7 for library APIs, pinned to this repo's installed versions
 alwaysApply: true
 ---
 
-When using an external library or a non-obvious React / Vite / Vitest / Testing Library API, check Context7 first. Do not invent method names, options, or code examples from memory.
+When using an external library API (Vitest, Testing Library, React, Vite, Next, MUI, etc.):
 
-Use Context7 especially for:
-- Vitest and React Testing Library patterns
-- Framework setup or configuration
-- Library APIs and documentation
-- How to use a specific library feature
+1. Read this project's dependency files first (`package.json`, lockfile). Use the **installed** version, not the latest on the internet.
+2. Call Context7 MCP only: `resolve-library-id`, then `query-docs`. Do not web-search for Context7 or as a substitute when MCP is connected.
+3. Prefer a **versioned** Context7 library ID (`/org/project/version`) that matches our installed version (same major; closest listed version if an exact match is missing).
+4. Do not upgrade packages, change `package.json`, or switch APIs (for example Vitest Browser Mode vs jsdom) unless the user asked for an upgrade.
+5. If Context7 docs and this repo disagree, follow this repo.
+
+Do not invent method names from memory.
