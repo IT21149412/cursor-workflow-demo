@@ -1,0 +1,12 @@
+---
+description: Use Context7 for library APIs instead of training-data guesses
+alwaysApply: true
+---
+
+When using an external library or a non-obvious React / Vite / Vitest / Testing Library API, check Context7 first. Do not invent method names, options, or code examples from memory.
+
+Use Context7 especially for:
+- Vitest and React Testing Library patterns
+- Framework setup or configuration
+- Library APIs and documentation
+- How to use a specific library feature
