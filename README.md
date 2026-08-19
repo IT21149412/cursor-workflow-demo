@@ -39,13 +39,15 @@ Plan a fix so stock 0 shows "Out of stock", empty/null still shows "Unknown", an
 
 ### 2. Current docs — Context7 (1 min)
 
-Install [Context7 MCP](https://github.com/upstash/context7) if it is not already connected, then:
+This repo includes `.cursor/mcp.json` for [Context7](https://github.com/upstash/context7). In **Cursor Settings → MCP**, enable `context7` and wait until it is connected (green). You should see tools like `resolve-library-id` and `query-docs`. Restart Cursor if it stays disconnected.
+
+Then prompt:
 
 ```
-Using Context7, confirm the current Vitest + React Testing Library pattern for rendering a component and asserting text. We will add a test for stock 0.
+Use Context7 MCP tools only (resolve-library-id then query-docs). Do not web search. Confirm the current Vitest + React Testing Library pattern for rendering a component and asserting text. We will add a test for stock 0.
 ```
 
-If the agent does not call Context7, add `use context7` to the prompt.
+Success looks like MCP tool calls, not "Search web: Context7…". If it searches the web, Skip that and check MCP is connected.
 
 ### 3. Agent implements (2 min)
 

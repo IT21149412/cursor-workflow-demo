@@ -25,13 +25,18 @@ header h1 {
 }
 
 header p {
-  margin: 0 0 24px;
+  margin: 0 0 8px;
   color: #5b6b80;
+}
+
+header p.total {
+  margin: 0 0 24px;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -43,6 +48,7 @@ td {
   text-align: left;
   padding: 12px 16px;
   border-bottom: 1px solid #e8edf4;
+  vertical-align: middle;
 }
 
 th {
@@ -55,6 +61,14 @@ th {
 
 tr:last-child td {
   border-bottom: none;
+}
+
+.stock-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  min-height: 1.6em;
 }
 
 .sku {
@@ -70,4 +84,9 @@ tr:last-child td {
   color: #176b3a;
   font-weight: 600;
   font-size: 0.85rem;
+}
+
+.badge-warn {
+  background: #fff4e5;
+  color: #9a5b00;
 }
